@@ -24,7 +24,7 @@
     <!-- Define the hand_tcp frame -->
     <link name="${ee_prefix}hand_tcp" />
     <joint name="${ee_prefix}hand_tcp_joint" type="fixed">
-      <origin xyz="${tcp_xyz}" rpy="${tcp_rpy}" />
+      <origin xyz="${tcp_xyz}" rpy="0.0 -1.571 0.0" />
       <parent link="${ee_prefix}hand" />
       <child link="${ee_prefix}hand_tcp" />
     </joint>
