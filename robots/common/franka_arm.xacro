@@ -149,5 +149,13 @@
       <parent link="${prefix}link7" />
       <child link="${prefix}link8" />
     </joint>
+
+    <joint name="${prefix}camera_joint" type="fixed">
+      <parent link="${prefix}link1" />
+      <child link="camera_link" />
+      <origin xyz="0.06 0 -0.16" rpy="3.14159 0 0" />
+    </joint>
+
+    <link name="camera_link"/>
   </xacro:macro>
 </robot>
