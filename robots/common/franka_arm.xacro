@@ -157,5 +157,74 @@
     </joint>
 
     <link name="camera_link"/>
+
+    <joint name="${prefix}camera_mount_joint" type="fixed">
+      <parent link="base" />
+      <child link="camera_mount" />
+      <origin xyz="-0.09 0.2 0.0" rpy="0 0 0" />
+    </joint>
+
+    <link name="camera_mount">
+      <visual>
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.2"/>
+        </geometry>
+        <material name="green">
+          <color rgba="0.0 1.0 0.0 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 -0.1 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.2"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="ground_plane_joint" type="fixed">
+      <parent link="base" />
+      <child link="ground_plane" />
+      <origin xyz="0 0 0.0" rpy="0 0 0" />
+    </joint>
+
+    <link name="ground_plane">
+      <visual>
+        <geometry>
+          <box size="1 1 0.01"/>
+        </geometry>
+        <material name="brown">
+          <color rgba="0.5 0.5 0.0 0.3"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="1 1 0.01"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="driver_box_joint" type="fixed">
+      <parent link="base" />
+      <child link="driver_box" />
+      <origin xyz="-0.32 0 0.045" rpy="0 0 0" />
+    </joint>
+
+    <link name="driver_box">
+      <visual>
+        <geometry>
+          <box size="0.36 0.44 0.09"/>
+        </geometry>
+        <material name="black">
+          <color rgba="0.0 0.0 0.0 0.3"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.36 0.44 0.09"/>
+        </geometry>
+      </collision>
+    </link>
+
   </xacro:macro>
 </robot>
