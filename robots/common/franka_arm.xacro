@@ -153,7 +153,7 @@
     <joint name="${prefix}camera_joint" type="fixed">
       <parent link="base" />
       <child link="camera_link" />
-      <origin xyz="0.05 1.11 0.6" rpy="0 0.2 -1.05" />
+      <origin xyz="0.00 0.195 0.22" rpy="0 0.524 -0.262" />
     </joint>
 
     <link name="camera_link"/>
@@ -161,7 +161,7 @@
     <joint name="${prefix}camera_mount_joint" type="fixed">
       <parent link="base" />
       <child link="camera_mount" />
-      <origin xyz="-0.09 0.2 0.0" rpy="0 0 0" />
+      <origin xyz="-0.07 0.2 0.0" rpy="0 0 0" />
     </joint>
 
     <link name="camera_mount">
@@ -171,7 +171,7 @@
           <box size="0.2 0.2 0.2"/>
         </geometry>
         <material name="green">
-          <color rgba="0.0 1.0 0.0 1"/>
+          <color rgba="0.0 1.0 0.0 0.3"/>
         </material>
       </visual>
       <collision>
@@ -185,7 +185,7 @@
     <joint name="ground_plane_joint" type="fixed">
       <parent link="base" />
       <child link="ground_plane" />
-      <origin xyz="0 0 0.0" rpy="0 0 0" />
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
     </joint>
 
     <link name="ground_plane">
